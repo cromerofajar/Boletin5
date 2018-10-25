@@ -1,47 +1,58 @@
-
 package boletin5;
 
 public class Conta {
+
     private String cliente;
     private String conta;
     private double saldo;
-    
-    public Conta(){}
-    public Conta(String cliente, String conta, double saldo){
-    this.cliente= cliente;
-    this.conta= conta;
-    this.saldo=saldo;
+
+    public Conta() {
     }
-    public void setCliente (String cliente){
-    this.cliente=cliente;
+
+    public Conta(String cliente, String conta, double saldo) {
+        this.cliente = cliente;
+        this.conta = conta;
+        this.saldo = saldo;
     }
-    public void setConta (String conta){
-    
-    this.conta=conta;
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
     }
-    public void setSaldo (double saldo){
-    
-    this.saldo=saldo;
+
+    public void setConta(String conta) {
+
+        this.conta = conta;
     }
-    public String getCliente (){
-    return cliente;
+
+    public void setSaldo(double saldo) {
+
+        this.saldo = saldo;
     }
-    public String getConta(){
-    return conta;
+
+    public String getCliente() {
+        return cliente;
     }
-    public double getSaldo(){
-    return saldo;
+
+    public String getConta() {
+        return conta;
     }
-    public void setIngresos(double saldo){
-    
-    this.saldo=this.saldo+saldo;
+
+    public double getSaldo() {
+        return saldo;
     }
-    public void setReintegro (double saldo){
-    
-    this.saldo=this.saldo-saldo;
+
+    public void setIngresos(double saldo) {
+
+        this.saldo = this.saldo + saldo;
     }
-    public void datosCliente(){
-    System.out.println("Cliente= "+cliente+". Conta= "+ conta+". Saldo= "+saldo);
+
+    public void setReintegro(double saldo) {
+
+        this.saldo = this.saldo - saldo;
     }
-    
+
+    public void datosCliente() {
+        System.out.println("Cliente= " + cliente + ". Conta= " + conta + ". Saldo= " + saldo);
+    }
+
 }
