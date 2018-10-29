@@ -44,12 +44,32 @@ public class Conta {
     public void setIngresos(double saldo) {
 
         this.saldo = this.saldo + saldo;
-    }
+        if (saldo<0){
+            System.out.println("Error no puede ingresar una cantidad negativa");
+            this.saldo= this.saldo - saldo;
+        }
+            else {                  
+            System.out.println("Cantidad ingresada tu saldo actual es de "+ this.saldo);
+            }
+        }
+    
 
     public void setReintegro(double saldo) {
 
         this.saldo = this.saldo - saldo;
-    }
+        if(saldo<0){
+            System.out.println("no puede retirar una cantidad negativa");
+            this.saldo= this.saldo+saldo;
+        }
+        else if (this.saldo < 0){
+            System.out.println("Error no puede retirar tal cantidad");
+            this.saldo= this.saldo + saldo;
+        }
+        else{
+            System.out.println("Cantidad retirada tu saldo actual es de "+ this.saldo);
+        }
+        }
+        
 
     public void datosCliente() {
         System.out.println("Cliente= " + cliente + ". Conta= " + conta + ". Saldo= " + saldo);
